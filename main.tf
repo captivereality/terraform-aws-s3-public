@@ -3,7 +3,7 @@ provider "aws" {
   profile = var.profile
 }
 
-resource "aws_s3_bucket" "bucket" {
+resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.bucket_name
   acl    = "public-read"
 
@@ -38,7 +38,7 @@ EOF
 resource "aws_s3_bucket_object" "s3_bucket" {
   acl          = "public-read"
   key          = "index.html"
-  bucket       = aws_s3_bucket.bucket.id
+  bucket       = aws_s3_bucket.s3_bucket.id
   content      = file("${path.module}/assets/index.html")
   content_type = "text/html"
 

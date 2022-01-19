@@ -13,6 +13,6 @@ output "name" {
 }
 
 output "endpoint" {
-    description = "Website endpoint for the bucket"
-  value = aws_s3_bucket.bucket.website_endpoint
+  description = "Website endpoint for the bucket"
+  value = aws_s3_bucket.s3_bucket.website_endpoint
 }
