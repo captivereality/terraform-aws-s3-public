@@ -8,7 +8,7 @@ variable "region" {
 
 variable "profile" {
   description   = "AWS profile (must be valid in .aws)"
-  default       = "captivereality" # todo: Update this
+  default       = ""
   type          = string
 }
 
